@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsFull>k__BackingField: 0
-  _cubePlace: {fileID: 4577901744419302128}
+  _cubePlace: {fileID: 8927737039632295784}
 --- !u!65 &6857336069109169238
 BoxCollider:
   m_ObjectHideFlags: 0
