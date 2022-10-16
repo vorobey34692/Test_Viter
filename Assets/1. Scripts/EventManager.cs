@@ -9,6 +9,4 @@ public class EventManager
     public static void OnStart() => Start?.Invoke();
     public static void OnLoose() => Loose?.Invoke();
     public static void OnWin() => Win?.Invoke();
-
-
 }

@@ -4,21 +4,18 @@ public class CellCreator : MonoBehaviour
 {
     [SerializeField] private GameCell _cellPrefab;
     [SerializeField] private Transform _start;
-    [SerializeField] private int _xSize = 3;
-    [SerializeField] private int _ySize = 3;
+    [SerializeField] public int XSize { get; private set; } = 3;
+    [SerializeField] public int YSize { get; private set; } = 3;
     [SerializeField] private LineElement _lineElementPrefab;
     [SerializeField] private CellManager _cellManager;
 
-    private void Awake()
-    {
-        EventManager.Start += CreateCell;
-    }
+    private void Awake() => EventManager.Start += CreateCell;
 
     private void CreateCell()
     {
-        for (int x = 0; x < _xSize; x++)
+        for (int x = 0; x < XSize; x++)
         {
-            for (int y = 0; y < _ySize; y++)
+            for (int y = 0; y < YSize; y++)
             {
                 GameCell newCell = Instantiate(_cellPrefab, new Vector3(_start.position.x + y, _start.position.y + x, _start.position.z), transform.rotation, _start);
                 _cellManager.AddCellDictionary(x, y, newCell);

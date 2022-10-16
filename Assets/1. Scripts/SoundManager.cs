@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    [Header("BackgroundSound")]
     [SerializeField] private AudioSource BackgroundSound;
     [field: SerializeField] public Slider _soundSlider { get; private set; }
     private float _soundVolume;

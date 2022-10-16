@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    private Transform _cubePlace;
     [field: SerializeField] public bool IsFull { get; private set; }
+    private Transform _cubePlace;
     private CellManager _cellManager;
 
     public void Inicialization(bool isFull, Transform cubePlace, CellManager cellManager = null)

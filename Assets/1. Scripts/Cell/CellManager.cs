@@ -13,10 +13,10 @@ public class CellManager : MonoBehaviour
         bool[] line = new bool[3];
         GameCell[] lineIsFull = new GameCell[3];
 
-        for (int y = 0; y < 3; y++)
+        for (int y = 0; y < _cellCreator.YSize; y++)
         {
             bool isFull = true;
-            for (int x = 0; x < 3; x++)
+            for (int x = 0; x < _cellCreator.XSize; x++)
             {
                 GameCell cell = _cellsDictionary[new Vector2Int(y, x)];
                 if (!cell.IsFull)
